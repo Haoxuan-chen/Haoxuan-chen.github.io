@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Map的HashMap方法的使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="JAVA Map集合 HashMap 方法的使用什么是HashMapHashMap 是 Map 接口的实现类，它存储的内容是键值对(key-value)映射，其中 key、value 都可以为 null。HashMap 是无序的，即被存入到 HashMap 中的元素，在遍历 HashMap 时，其输出是无序的。 创建HashMap集合使用下面代码即可创建 1234public static voi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Map的HashMap方法的使用">
+<meta property="og:url" content="http://example.com/Map%E7%9A%84HashMap%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JAVA Map集合 HashMap 方法的使用什么是HashMapHashMap 是 Map 接口的实现类，它存储的内容是键值对(key-value)映射，其中 key、value 都可以为 null。HashMap 是无序的，即被存入到 HashMap 中的元素，在遍历 HashMap 时，其输出是无序的。 创建HashMap集合使用下面代码即可创建 1234public static voi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-10T12:50:37.000Z">
+<meta property="article:modified_time" content="2021-11-10T13:46:29.088Z">
+<meta property="article:author" content="Haoxuan-chen">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/Map%E7%9A%84HashMap%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="article-date">
+  <time class="dt-published" datetime="2021-11-10T12:50:37.000Z" itemprop="datePublished">2021-11-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Map的HashMap方法的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="JAVA-Map集合-HashMap-方法的使用"><a href="#JAVA-Map集合-HashMap-方法的使用" class="headerlink" title="JAVA Map集合 HashMap 方法的使用"></a>JAVA Map集合 HashMap 方法的使用</h2><h3 id="什么是HashMap"><a href="#什么是HashMap" class="headerlink" title="什么是HashMap"></a>什么是HashMap</h3><p>HashMap 是 Map 接口的实现类，它存储的内容是键值对(key-value)映射，其中 key、value 都可以为 null。HashMap 是无序的，即被存入到 HashMap 中的元素，在遍历 HashMap 时，其输出是无序的。</p>
+<h3 id="创建HashMap集合"><a href="#创建HashMap集合" class="headerlink" title="创建HashMap集合"></a>创建HashMap集合</h3><p>使用下面代码即可创建</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">   // 创建 HashMap 集合,key 存储字符串类型，value 存储整数类型</span><br><span class="line">   Map&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HashMap-的常用方法"><a href="#HashMap-的常用方法" class="headerlink" title="HashMap 的常用方法"></a>HashMap 的常用方法</h3><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>方法说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>put()方法</td>
+<td>往集合中添加元素，key 值不可重复，重复时会覆盖之前的 value 值</td>
+</tr>
+<tr>
+<td>size()方法</td>
+<td>返回集合长度</td>
+</tr>
+<tr>
+<td>get(key)方法</td>
+<td>获取对应 key 值的 value 值</td>
+</tr>
+<tr>
+<td>clear()方法</td>
+<td>清除集合中的所有元素</td>
+</tr>
+<tr>
+<td>values()方法</td>
+<td>返回一个新集合，获取集合中所有元素的 values</td>
+</tr>
+<tr>
+<td>keySet()方法</td>
+<td>返回一个新集合，获取集合中所有元素的 key</td>
+</tr>
+<tr>
+<td>remove()方法</td>
+<td>根据 key 或者 key-value 去除集合中元素，并分别返回 value 值和 Boolean 值</td>
+</tr>
+<tr>
+<td>iterator()方法</td>
+<td>返回一个迭代器对象</td>
+</tr>
+<tr>
+<td>entrySet()方法</td>
+<td>将 Map 集合每个 key-value 转换为一个 Entry 对象，并返回由所有的 Entry 对象组成的 Set 集合</td>
+</tr>
+<tr>
+<td>containsKey()</td>
+<td>判断集合中是否含右指定的 key 值</td>
+</tr>
+</tbody></table>
+<h3 id="常用方法的示例："><a href="#常用方法的示例：" class="headerlink" title="常用方法的示例："></a>常用方法的示例：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        // 创建 HashMap 集合,key存储字符串类型，value存储整数类型</span><br><span class="line">        Map&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();</span><br><span class="line">        // 添加元素</span><br><span class="line">        hashMap.put(<span class="string">&quot;李四&quot;</span>,28);</span><br><span class="line">        hashMap.put(<span class="string">&quot;张三&quot;</span>,26);</span><br><span class="line">        hashMap.put(<span class="string">&quot;王五&quot;</span>,26);</span><br><span class="line">        // 根据 key 获取 value 值</span><br><span class="line">        Integer zs = hashMap.get(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">        System.out.println(zs);</span><br><span class="line">        // 获取所有 key 值</span><br><span class="line">        Set&lt;String&gt; strings = hashMap.keySet();</span><br><span class="line">        System.out.println(strings);</span><br><span class="line">        // 获取所有 value 值</span><br><span class="line">        Collection&lt;Integer&gt; values = hashMap.values();</span><br><span class="line">        System.out.println(values);</span><br><span class="line">        // 根据 key 去除元素</span><br><span class="line">        Integer ww = hashMap.remove(<span class="string">&quot;王五&quot;</span>);</span><br><span class="line">        System.out.println(ww);</span><br><span class="line">        // 根据 key-value 去除元素</span><br><span class="line">        boolean boole = hashMap.remove(<span class="string">&quot;李四&quot;</span>, 28);</span><br><span class="line">        System.out.println(boole);     </span><br><span class="line">        System.out.print(hashMap);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">26</span><br><span class="line">[李四, 张三, 王五]</span><br><span class="line">[28, 26, 26]</span><br><span class="line">26</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&#123;张三=26&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历HashMap"><a href="#遍历HashMap" class="headerlink" title="遍历HashMap"></a>遍历HashMap</h3><p>下面是常用的三种方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        // 创建 HashMap 集合,key 存储字符串类型，value 存储整数类型</span><br><span class="line">        Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        // 添加元素</span><br><span class="line">        map.put(<span class="string">&quot;李四&quot;</span>,28);</span><br><span class="line">        map.put(<span class="string">&quot;张三&quot;</span>,26);</span><br><span class="line">        map.put(<span class="string">&quot;王五&quot;</span>,26);</span><br><span class="line">        //第一种：通过 keySet 遍历，普遍使用</span><br><span class="line">        <span class="keyword">for</span> (String key : map.keySet()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;key= &quot;</span>+ key + <span class="string">&quot; and value= &quot;</span> + map.get(key));</span><br><span class="line">             System.out.println(----------);</span><br><span class="line">        &#125;</span><br><span class="line">        //第二种:通过 entrySet 和迭代器遍历</span><br><span class="line">        Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; it = map.entrySet().iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">            Map.Entry&lt;String, Integer&gt; entry = it.next();</span><br><span class="line">            System.out.println(<span class="string">&quot;key= &quot;</span> + entry.getKey() + <span class="string">&quot; and value= &quot;</span> + entry.getValue());</span><br><span class="line">            System.out.println(----------);</span><br><span class="line">        &#125;</span><br><span class="line">        //第三种：通过 entrySet 和增强 <span class="keyword">for</span> 循环遍历，推荐，尤其是容量大时</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;key= &quot;</span> + entry.getKey() + <span class="string">&quot; and value= &quot;</span> + entry.getValue());</span><br><span class="line">            System.out.println(----------);</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h2><ul>
+<li>接收给定的一行字符串（如：红烧鱼：50，小炒牛肉：75，…）；</li>
+<li>切割字符串，把切割后的元素添加进 HashMap 集合中；</li>
+<li>往集合中添加一道菜，菜名：lamb，价格：50；</li>
+<li>输出所有菜名（不含价格）；</li>
+<li>删除红烧鱼和小炒牛肉这两道菜后输出集合长度；</li>
+<li>打印集合。</li>
+</ul>
+<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class CollTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 请在Begin-End间编写代码</span><br><span class="line">        /********** Begin **********/</span><br><span class="line">        // 第一步：接收给定字符串</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        String zifu = sc.next();</span><br><span class="line">        //String zifu = <span class="string">&quot;粉蒸肉：50，红烧鱼：50，小炒牛肉：75，手撕包菜：20，蒜蓉虾：100&quot;</span>;</span><br><span class="line">        // 第二步：切割字符串</span><br><span class="line">            String[] output = zifu.split(<span class="string">&quot;，&quot;</span>);</span><br><span class="line">            // 第三步：创建 HashMap 集合,key为菜名，value为价格</span><br><span class="line">            Map&lt;String, String&gt; hashMao = new HashMap&lt;&gt;();</span><br><span class="line">            // 第四步：添加数据到集合中</span><br><span class="line">        <span class="keyword">for</span>(int x=0;x&lt; output.length;x++) &#123;</span><br><span class="line">            String[] key=output[x].split(<span class="string">&quot;：&quot;</span>);</span><br><span class="line">            hashMao.put(key[0], key[1]);</span><br><span class="line">        &#125;</span><br><span class="line">          // hashMao.put(, sc.nextInt());</span><br><span class="line"></span><br><span class="line">            // 第五步：往集合中添加给定的一道菜</span><br><span class="line">            hashMao.put(<span class="string">&quot;lamb&quot;</span>, <span class="string">&quot;50&quot;</span>);</span><br><span class="line">            // 第六步：输出所有菜名</span><br><span class="line">            Set&lt;String &gt; str = hashMao.keySet();</span><br><span class="line">            System.out.println(str);</span><br><span class="line">            // 第七步：删除红烧鱼和小炒牛肉这两道菜后输出集合长度</span><br><span class="line">            hashMao.remove(<span class="string">&quot;红烧鱼&quot;</span>,<span class="string">&quot;50&quot;</span>);</span><br><span class="line">            hashMao.remove(<span class="string">&quot;小炒牛肉&quot;</span>,<span class="string">&quot;75&quot;</span>);</span><br><span class="line">            System.out.println(hashMao.size());</span><br><span class="line">            // 第八步：打印集合</span><br><span class="line">            System.out.println(hashMao);</span><br><span class="line">            /********** End **********/</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试数据1"><a href="#测试数据1" class="headerlink" title="测试数据1"></a>测试数据1</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">粉蒸肉：50，红烧鱼：50，小炒牛肉：75，手撕包菜：20，蒜蓉虾：100</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试结果1"><a href="#测试结果1" class="headerlink" title="测试结果1"></a>测试结果1</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[手撕包菜, 蒜蓉虾, lamb, 小炒牛肉, 粉蒸肉, 红烧鱼]</span><br><span class="line">4</span><br><span class="line">&#123;手撕包菜=20, 蒜蓉虾=100, lamb=50, 粉蒸肉=50&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试数据2"><a href="#测试数据2" class="headerlink" title="测试数据2"></a>测试数据2</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">干煸四季豆：20，红烧鱼：50，小炒牛肉：75，土豆丝：20</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试结果2"><a href="#测试结果2" class="headerlink" title="测试结果2"></a>测试结果2</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[干煸四季豆, lamb, 小炒牛肉, 红烧鱼, 土豆丝]</span><br><span class="line">3</span><br><span class="line">&#123;干煸四季豆=20, lamb=50, 土豆丝=20&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写到最后，这道题困扰了我也是有一会的，可能是c语言基础不太牢固，有一些步骤并不是一下子就想到，也查阅了csdn的一些资料，总的来说写的还是挺顺利的！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/Map%E7%9A%84HashMap%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8.html" data-id="ckvtkz3w10000bcvyecgdbrvj" data-title="Map的HashMap方法的使用" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/10/Map%E7%9A%84HashMap%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8/">Map的HashMap方法的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/03/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Haoxuan-chen<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
